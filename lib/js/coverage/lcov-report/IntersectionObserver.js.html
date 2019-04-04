@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for IntersectionObserver.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> IntersectionObserver.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.88% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>62/64</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>52/60</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>14/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.83% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>61/63</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">90x</span>
+<span class="cline-any cline-yes">29x</span>
+<span class="cline-any cline-yes">29x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">90x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29x</span>
+<span class="cline-any cline-yes">29x</span>
+<span class="cline-any cline-yes">29x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import { findDOMNode } from 'react-dom';
+import PropTypes from 'prop-types';
+import invariant from 'invariant';
+import warning from 'warning';
+import { createObserver, observeElement, unobserveElement } from './observer';
+import { isDOMTypeElement, shallowCompare } from './utils';
+&nbsp;
+const observerOptions = ['root', 'rootMargin', 'threshold'];
+const observerProps = ['disabled'].concat(observerOptions);
+const objectProto = Object.prototype;
+&nbsp;
+export default class IntersectionObserver extends React.Component {
+    static displayName = 'IntersectionObserver';
+&nbsp;
+    constructor(props) {
+        super(props);
+        this.isEntered = false;
+        this.minThreshold = 0;
+    }
+&nbsp;
+    static propTypes = {
+        /**
+         * The element that is used as the target to observe.
+         */
+        children: PropTypes.element.isRequired,
+&nbsp;
+        /**
+         * The element that is used as the viewport for checking visibility of the target.
+         * Can be specified as string for selector matching within the document.
+         * Defaults to the browser viewport if not specified or if null.
+         */
+        root: PropTypes.oneOfType(
+            [PropTypes.string].concat(typeof HTMLElement === 'undefined' ? <span class="branch-0 cbranch-no" title="branch not covered" >[] </span>: PropTypes.instanceOf(HTMLElement)),
+        ),
+&nbsp;
+        /**
+         * Margin around the root. Can have values similar to the CSS margin property,
+         * e.g. "10px 20px 30px 40px" (top, right, bottom, left).
+         * If the root element is specified, the values can be percentages.
+         * This set of values serves to grow or shrink each side of the root element's
+         * bounding box before computing intersections.
+         * Defaults to all zeros.
+         */
+        rootMargin: PropTypes.string,
+&nbsp;
+        /**
+         * Either a single number or an array of numbers which indicate at what percentage
+         * of the target's visibility the observer's callback should be executed.
+         * If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5.
+         * If you want the callback run every time visibility passes another 25%,
+         * you would specify the array [0, 0.25, 0.5, 0.75, 1].
+         * The default is 0 (meaning as soon as even one pixel is visible, the callback will be run).
+         * A value of 1.0 means that the threshold isn't considered passed until every pixel is visible.
+         */
+        threshold: PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
+&nbsp;
+        /**
+         * When true indicate that events fire only until the element is intersecting.
+         * Different browsers behave differently towards the isIntersecting property, make sure
+         * you polyfill and/or override the IntersectionObserverEntry object's prototype to your needs.
+         * Defaults to false.
+         */
+        onlyOnce: PropTypes.bool,
+&nbsp;
+        /**
+         * Controls whether the element should stop being observed by its IntersectionObserver instance.
+         * Defaults to false.
+         */
+        disabled: PropTypes.bool,
+&nbsp;
+        /**
+         * Function that will be invoked whenever the intersection value for this element changes.
+         */
+        onChange: PropTypes.func.isRequired,
+&nbsp;
+        /**
+         * Function that will be invoked whenever the intersection ratio for this element goes above least value of threshold
+         */
+        onEntry: PropTypes.func,
+&nbsp;
+        /**
+         * Function that will be invoked whenever the intersection ratio for this element goes below least value of threshold
+         */
+        onExit: PropTypes.func,
+&nbsp;
+        /**
+         * Function that will be invoked after specified waitTime after entry.
+         */
+        onCertifiedView: PropTypes.func,
+&nbsp;
+        /**
+         * Time interval in miliseconds to wait after entry to call certified view.
+         */
+        waitTime: PropTypes.number,
+    };
+&nbsp;
+    get options() {
+        return observerOptions.reduce((options, key) =&gt; {
+            if (objectProto.hasOwnProperty.call(this.props, key)) {
+                const useQuery = key === 'root' &amp;&amp; objectProto.toString.call(this.props[key]) === '[object String]';
+                options[key] = useQuery ? <span class="branch-0 cbranch-no" title="branch not covered" >document.querySelector(this.props[key]) </span>: this.props[key];
+            }
+            return options;
+        }, {});
+    }
+&nbsp;
+    setMinThreshold = () =&gt; {
+        if (Array.isArray(this.props.threshold)) {
+            this.minThreshold = this.props.threshold.reduce((a, b) =&gt; {
+                return Math.min(a, b);
+            });
+        } else {
+            this.minThreshold = this.props.threshold;
+        }
+    };
+&nbsp;
+    handleChange = event =&gt; {
+        if (this.props.onEntry &amp;&amp; !this.isEntered &amp;&amp; event.intersectionRatio &gt;= this.minThreshold) {
+            this.props.onEntry(event, this.unobserve);
+            this.isEntered = true;
+            this.waitForCertifiedView = setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                if (this.props.onCertifiedView) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.props.onCertifiedView(event, this.unobserve);</span>
+                }
+            }, this.props.waitTime);
+        }
+&nbsp;
+        if (this.props.onExit &amp;&amp; this.isEntered &amp;&amp; event.intersectionRatio &lt; this.minThreshold) {
+            this.props.onExit(event, this.unobserve);
+            this.isEntered = false;
+            clearTimeout(this.waitForCertifiedView);
+        }
+&nbsp;
+        this.props.onChange(event, this.unobserve);
+&nbsp;
+        if (this.props.onlyOnce) {
+            // eslint-disable-next-line no-undef
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (process.env.NODE_ENV !== 'production') {
+                invariant(
+                    'isIntersecting' in event,
+                    "onlyOnce requires isIntersecting to exists in IntersectionObserverEntry's prototype. Either your browser or your polyfill lacks support.",
+                );
+            }
+            if (event.isIntersecting) {
+                this.unobserve();
+            }
+        }
+        // eslint-disable-next-line no-undef
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (process.env.NODE_ENV !== 'production') {
+            warning(
+                !this.props.hasOwnProperty('onlyOnce'),
+                'ReactIntersectionObserver: [deprecation] Use the second argument of onChange to unobserve a target instead of onlyOnce. This prop will be removed in the next major version.',
+            );
+        }
+    };
+&nbsp;
+    handleNode = target =&gt; {
+        /**
+         * Forward hijacked ref to user.
+         */
+        const nodeRef = this.props.children.ref;
+        if (nodeRef) {
+            if (typeof nodeRef === 'function') {
+                nodeRef(target);
+            } else <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof nodeRef === 'object') {
+                nodeRef.current = target;
+            }
+        }
+&nbsp;
+        /**
+         * This is a bit ugly: would like to use getSnapshotBeforeUpdate(), but we do not want to depend on
+         * react-lifecycles-compat to support React versions prior to 16.3 as this extra boolean gets the job done.
+         */
+        this.targetChanged = (this.renderedTarget &amp;&amp; target) != null &amp;&amp; this.renderedTarget !== target;
+        if (this.targetChanged) {
+            this.unobserve();
+        }
+        this.target = target;
+    };
+&nbsp;
+    observe = () =&gt; {
+        this.target = isDOMTypeElement(this.target) ? this.target : <span class="branch-1 cbranch-no" title="branch not covered" >findDOMNode(this.target);</span>
+        this.observer = createObserver(this.options);
+        observeElement(this);
+    };
+&nbsp;
+    unobserve = () =&gt; {
+        if (this.target != null) {
+            unobserveElement(this);
+        }
+    };
+&nbsp;
+    componentDidMount() {
+        // eslint-disable-next-line no-undef
+        if (process.env.NODE_ENV !== 'production' &amp;&amp; parseInt(React.version, 10) &lt; 16) {
+            invariant(
+                this.target,
+                'Stateless function components cannot be given refs. Attempts to access this ref will fail.',
+            );
+        }
+        if (!this.props.disabled) {
+            this.observe();
+        }
+        this.setMinThreshold();
+    }
+&nbsp;
+    componentDidUpdate(prevProps) {
+        const propsChanged = observerProps.some(prop =&gt; shallowCompare(this.props[prop], prevProps[prop]));
+&nbsp;
+        if (propsChanged) {
+            this.unobserve();
+        }
+&nbsp;
+        if (this.targetChanged || propsChanged) {
+            if (!this.props.disabled) {
+                this.observe();
+            }
+        }
+        this.setMinThreshold();
+    }
+&nbsp;
+    componentWillUnmount() {
+        this.unobserve();
+    }
+&nbsp;
+    render() {
+        this.renderedTarget = this.target; // this value is null on the first render
+&nbsp;
+        return React.cloneElement(React.Children.only(this.props.children), {
+            ref: this.handleNode,
+        });
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Apr 03 2019 01:12:56 GMT+0530 (IST)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>
