@@ -73,15 +73,17 @@
     babel-preset-react "^6.24.1"
     babel-preset-react-hmre "^1.1.1"
 
-"@researchgate/eslint-config-rg-base@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@researchgate/eslint-config-rg-base/-/eslint-config-rg-base-2.0.0.tgz#8736eb1974691e517909eb0224cd2a1ee634e21a"
+"@researchgate/eslint-config-rg-base@^2.0.1":
+  version "2.0.1"
+  resolved "https://nexus.core.cvent.org/nexus/repository/npm-public/@researchgate/eslint-config-rg-base/-/eslint-config-rg-base-2.0.1.tgz#9d7d03bf095bfd00e57eb90a43343e5a3b77bce3"
+  integrity sha512-dyrR388K4zUW5BNBQSz0Ie2fMOOQYEWO8dZQFmJ5ZEeFYr0MaSPNi4nu5cENhEFDwVjckjy2RUMxZzKcyX/BcQ==
 
-"@researchgate/eslint-config-rg-react@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@researchgate/eslint-config-rg-react/-/eslint-config-rg-react-2.0.0.tgz#85fad07a0bb520a1abcfdef1c0e8312d14069ac3"
+"@researchgate/eslint-config-rg-react@^2.0.1":
+  version "2.0.1"
+  resolved "https://nexus.core.cvent.org/nexus/repository/npm-public/@researchgate/eslint-config-rg-react/-/eslint-config-rg-react-2.0.1.tgz#0c1d393961836f1fdca5eb31f42dc277fd27c6a4"
+  integrity sha512-rviIhFXpXLkJoRX+Bgvurce4V9Kc15kIn+o76ZpNQ5ahQXSr/pVoZvdnESFAe5jI2rWg/aKkqIYD1fLMHAuF4w==
   dependencies:
-    "@researchgate/eslint-config-rg-base" "^2.0.0"
+    "@researchgate/eslint-config-rg-base" "^2.0.1"
 
 "@storybook/addon-actions@^3.2.16":
   version "3.2.16"
