@@ -94,11 +94,12 @@
     react-inspector "^2.2.1"
     uuid "^3.1.0"
 
-"@storybook/addon-knobs@^3.4.4":
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-3.4.5.tgz#6ac34c1845b0db6683455e1edbe15993490fc18b"
+"@storybook/addon-knobs@^3.4.12":
+  version "3.4.12"
+  resolved "https://nexus.core.cvent.org/nexus/repository/npm-public/@storybook/addon-knobs/-/addon-knobs-3.4.12.tgz#32fb48e15648f58870450d9699fa80cf6d7a0f47"
+  integrity sha512-ZDC0ceuVJoXJj9Ef1qg7L8xZycF1pl5VwvE6ETC1htahPRI7AtC4//NGCuuU+fr4Fp8wVlG1cRw6oN/DowdMUg==
   dependencies:
-    "@storybook/components" "3.4.5"
+    "@storybook/components" "3.4.12"
     babel-runtime "^6.26.0"
     deep-equal "^1.0.1"
     global "^4.3.2"
@@ -139,9 +140,10 @@
   version "3.2.16"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.2.16.tgz#07d8686328c0bb885aa8b69254fcf0745d22a620"
 
-"@storybook/components@3.4.5":
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.4.5.tgz#02653ba562e3678eab3adbc31b012eae4fbe61dc"
+"@storybook/components@3.4.12":
+  version "3.4.12"
+  resolved "https://nexus.core.cvent.org/nexus/repository/npm-public/@storybook/components/-/components-3.4.12.tgz#07499c43aca1f8543211202f3d142764bdd4c807"
+  integrity sha512-1wgsFOlpmziP7K0ilo/O3piyGm+iVzzFc2RIVXDCMamPVTx19MJNGaBefcSezw8mO5p0XrU/nEhxOiKIJw4UUw==
   dependencies:
     glamor "^2.20.40"
     glamorous "^4.12.1"
