@@ -23,7 +23,7 @@
     "babel-eslint": "^8.0.2",
     "babel-jest": "^21.0.0",
     "babel-polyfill": "^6.26.0",
-    "conventional-github-releaser": "^2.0.0",
+    "conventional-github-releaser": "^2.0.2",
     "cross-env": "^5.1.1",
     "css-loader": "^0.28.4",
     "eslint": "^4.11.0",
