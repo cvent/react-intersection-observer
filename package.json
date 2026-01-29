@@ -20,7 +20,7 @@
     "@storybook/addon-options": "^3.2.16",
     "@storybook/react": "^3.2.16",
     "babel-cli": "^6.24.1",
-    "babel-eslint": "^8.0.2",
+    "@babel/eslint-parser": "^7.11.0",
     "babel-jest": "^21.0.0",
     "babel-polyfill": "^6.26.0",
     "conventional-github-releaser": "^2.0.0",
